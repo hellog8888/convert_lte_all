@@ -12,14 +12,7 @@ def count_for_uniq():
     return count_
 
 
-def check_or_create_temp_folder(path):
-    try:
-        os.mkdir(path)
-    except FileExistsError:
-        pass
-
-
-def check_or_create_source_folder(path):
+def check_or_create_folder(path):
     try:
         os.mkdir(path)
     except FileExistsError:

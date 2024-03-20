@@ -19,6 +19,13 @@ def check_or_create_temp_folder(path):
         pass
 
 
+def check_or_create_source_folder(path):
+    try:
+        os.mkdir(path)
+    except FileExistsError:
+        pass
+
+
 def get_source_name(source_path):
     for root, dirs, files in os.walk(source_path):
         try:

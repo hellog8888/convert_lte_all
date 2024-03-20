@@ -4,7 +4,7 @@ import pandas as pd
 from transliterate import translit
 from lib.create_atd_file import create_atd_file
 from lib.convert_functions import dms2dd, convert_csv_to_txt
-from lib.add_functions import count_for_uniq, get_source_name, check_or_create_temp_folder, create_folder_and_move_files
+from lib.add_functions import count_for_uniq, get_source_name, check_or_create_temp_folder, create_folder_and_move_files, check_or_create_source_folder
 
 
 dict_for_operator = \

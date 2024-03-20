@@ -32,7 +32,7 @@ def create_folder_and_move_files(name_dest_folder):
 
         date_fmt = datetime.datetime.now()
 
-        final_folder = f"{name_dest_folder}__{date_fmt.date()}_{date_fmt.hour}_{date_fmt.minute}_{date_fmt.second}"
+        final_folder = f"{name_dest_folder}__дата_создания_{date_fmt.date()}_{date_fmt.hour}_{date_fmt.minute}_{date_fmt.second}"
         os.mkdir(f'Результат\{final_folder}')
 
         subdir = [file.name for file in files]

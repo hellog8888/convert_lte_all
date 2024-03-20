@@ -4,7 +4,7 @@ import pandas as pd
 from transliterate import translit
 from lib.create_atd_file import create_atd_file
 from lib.convert_functions import dms2dd, convert_csv_to_txt
-from lib.add_functions import count_for_uniq, get_source_name, check_or_create_temp_folder, create_folder_and_move_files, check_or_create_source_folder
+from lib.add_functions import count_for_uniq, get_source_name, check_or_create_temp_folder, check_or_create_folder
 
 
 dict_for_operator = \
@@ -78,12 +78,12 @@ def main_stage(file_LTE_all):
 if __name__ == '__main__':
 
     print('1. Считывание файла')
-    check_or_create_source_folder(f'lib\\temp_folder')
+    check_or_create_folder(f'lib\\temp_folder')
+    check_or_create_folder(f'.\Исходный_файл')
     source_file_name = str.strip(get_source_name('Исходный_файл'), '.xls')
     file_LTE_all = pd.read_excel(glob.glob('Исходный_файл/*.xls')[0])
 
     print('2. Выполнение...')
-    check_or_create_temp_folder(f'lib\\temp_folder')
     main_stage(file_LTE_all)
 
     print('3. Создание результата')

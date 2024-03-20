@@ -78,6 +78,7 @@ def main_stage(file_LTE_all):
 if __name__ == '__main__':
 
     print('1. Считывание файла')
+    check_or_create_source_folder(f'lib\\temp_folder')
     source_file_name = str.strip(get_source_name('Исходный_файл'), '.xls')
     file_LTE_all = pd.read_excel(glob.glob('Исходный_файл/*.xls')[0])
 
